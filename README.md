@@ -1,20 +1,22 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Poyecto principal 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Página principal del proyecto dummy que consiste en una aplicación FrontEnd contenerizada desarrollada en React usando la herramienta Astro.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Objetivo
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+El objetivo principal de este proyecto es proporcionar un entorno de prueba para el equipo DevOps. Se utiliza para realizar pruebas de los templates desarrollados en el repositorio ‘ads_pipeline_cicd’. Estas pruebas incluyen:
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+- Compilación de código.
+- Ejecución de pruebas unitarias.
+- Despliegue de imágenes a un container registry.
+- Despliegue de la aplicación en OpenShift.
+
+Este proyecto sirve como un sandbox donde el equipo DevOps puede experimentar y validar el funcionamiento de los flujos de trabajo y plantillas de CI/CD desarrollados para implementaciones más complejas.
+
+## Tecnologías utilizadas
+
+- **Astro**
+- **React**
+- **Tailwind CSS**
+- **Styled Components**
+- **Iconify**

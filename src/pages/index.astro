@@ -1,0 +1,15 @@
+---
+import { mainMenu } from '../components/data/menuData';
+import Footer from '../components/Footer/Footer.astro';
+import Header from '../components/header/Header.astro';
+import Hero from '../components/hero/Hero.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="App Devops Dummy">
+	<Header origin={mainMenu} />
+	<main class="self-center w-full">
+		<Hero />
+	</main>
+	<Footer/>
+</Layout>
