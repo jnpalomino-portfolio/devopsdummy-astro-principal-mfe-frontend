@@ -4,7 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import Header from "../components/header/Header.astro";
 import {  menuBlog } from "../components/data/menuData";
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, pubDate } = Astro.props;
 type Props = CollectionEntry<"blog">["data"];
 import "../styles/global.css"
 import Footer from "../components/Footer/Footer.astro";
