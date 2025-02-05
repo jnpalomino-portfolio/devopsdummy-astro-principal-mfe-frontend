@@ -6,7 +6,7 @@ Página principal del proyecto dummy que consiste en una aplicación FrontEnd co
 
 ## Objetivo
 
-El objetivo principal de este proyecto es proporcionar un entorno de prueba para el equipo DevOps. Se utiliza para realizar pruebas de los templates desarrollados en el repositorio ‘devops-pipeline-cicd’. Estas pruebas incluyen:
+El objetivo principal de este proyecto es proporcionar un entorno de prueba para el equipo DevOps. Se utiliza para realizar pruebas de los templates desarrollados en el repositorio 'devops-pipeline-cicd'. Estas pruebas incluyen:
 
 - Compilación de código.
 - Ejecución de pruebas unitarias.
