@@ -2,7 +2,15 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   test: {
+    environment: "jsdom",
     globals: true,
-    environment: "jsdom", // Simula un navegador para pruebas de componentes
+    setupFiles: "./setupTest.js",
+    reporters: ["default", "junit"],
+    outputFile: "test-results.xml",
+    coverage: {
+      provider: "v8",
+      reporter: ["cobertura", "text", "html", "lcov"],
+      reportsDirectory: "./coverage",
+    },
   },
 });
