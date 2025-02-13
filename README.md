@@ -4,29 +4,92 @@
 
 Página principal del proyecto dummy que consiste en una aplicación FrontEnd contenerizada desarrollada en React usando la herramienta Astro.
 
-## Objetivo
+# **DEVOPS DUMMY - HOLAVITE**
+# **REACT-VITE**
 
-El objetivo principal de este proyecto es proporcionar un entorno de prueba para el equipo DevOps. Se utiliza para realizar pruebas de los templates desarrollados en el repositorio `devops-pipeline-cicd`. Estas pruebas incluyen:
+## Descripción del proyecto
+Este proyecto dummy consiste en el FrontEnd principal del proyecto contenerizado desarrollado en `Astro`, sus pruebas unitarias están siendo desarrolladas utilizando `Vittest`.
+
+## Funcionamiento
+Este proyecto funciona disponiendo botones que consultan las URL de los proyectos de React, Laravel y Springboot. (FALTAN ANGULAR Y NEXT)
+
+![Imagen del proyecto](image.png)
+
+## Objetivo
+El objetivo principal de este proyecto es proporcionar un proyecto de prueba para el equipo DevOps. Se utiliza para realizar pruebas de los pipelines de CI/CD desarrollados en el repositorio `devops-pipeline-cicd`. 
+
+Los pasos del pipeline incluyen:
 
 - Compilación de código.
 - Ejecución de pruebas unitarias.
-- Despliegue de imágenes a un container registry.
-- Despliegue de la aplicación en OpenShift.
+- Despliegue de imágenes a Azure Container Registry.
+- Despliegue de la aplicación en OpenShift preproductivo y productivo en el namespace `devopsdummy`.
 
-Este proyecto sirve como un sandbox donde el equipo DevOps puede experimentar y validar el funcionamiento de los flujos de trabajo y plantillas de CI/CD desarrollados para implementaciones más complejas.
+---
 
-# Implementación en local de aplicación Dummy
-Con el objetivo de desplegar localmente la aplicación Dummy se requieren las siguientes tecnologías.
+## **Implementación en local de la aplicación Dummy**
+Para desplegar localmente la aplicación Dummy, se pueden seguir dos métodos: sin Docker o con Docker.
 
-## Tecnologías necesarias
+### **Opción 1: Instalación sin Docker**
+#### **Tecnologías necesarias**
+- Node.js
+- npm o yarn
 - git
-- DockerDesktop
 
-## Pasos de instalación en local
-1. Abrir DockerDesktop.
-2. Clonar el repositorio.
-3. Ingresar a la carpeta raíz del proyecto en una terminal.
-4. Ejecutar el comando `docker build -t dummy-astro:1 .` para realizar la cosntrucción de la imagen.
-5. Ejecutar el comando `docker run -p 8007:8007 dummy-astro:1` para la construcción del contenedor en base a la imagen generada anteriormente.
-6. Ingresar por el navegador a la URL http://localhost:8007/ para ver el proyecto ejecutarse en local.
+#### **Pasos de instalación y ejecución**
+1. Clonar el repositorio:
+   ```sh
+   git clone https://AlcaldiaMedellin@dev.azure.com/AlcaldiaMedellin/DevOps%20Dummy/_git/devopsdummy-astro-principal-mfe-frontend
+   ```
+2. Ingresar a la carpeta del proyecto:
+   ```sh
+   cd devopsdummy-astro-principal-mfe-frontend
+   ```
+3. Instalar dependencias:
+   ```sh
+   npm install
+   ```
+4. Iniciar el proyecto en modo desarrollo (esto solo inicia el servidor, no ejecuta pruebas unitarias):
+   ```sh
+   npm run dev
+   ```
+5. Acceder a la aplicación en el navegador: [http://localhost:4321](http://localhost:4321)
+6. (Opcional) Ejecutar pruebas unitarias: (EN CONSTRUCCIÓN)
+   ```sh
+   npm test
+   ```
+7. (Opcional) Ejecutar pruebas unitarias con cobertura:
+   ```sh
+   npm test -- --coverage
+   ```
+
+---
+
+### **Opción 2: Instalación con Docker**
+#### **Tecnologías necesarias**
+- Docker Desktop
+- git
+
+#### **Pasos de instalación y ejecución**
+1. Abrir Docker Desktop y asegurarse de que esté en ejecución.
+
+2. Clonar el repositorio:
+   ```sh
+   git clone https://AlcaldiaMedellin@dev.azure.com/AlcaldiaMedellin/DevOps%20Dummy/_git/devopsdummy-astro-principal-mfe-frontend
+   ```
+3. Ingresar a la carpeta del proyecto:
+   ```sh
+   cd devopsdummy-astro-principal-mfe-frontend
+   `````
+4. Construir la imagen Docker:
+   ```sh
+   docker build -t devopsdummyastro:1 .
+   ```
+5. Ejecutar el contenedor:
+   ```sh
+   docker run -p 4321:4321 devopsdummyastro:1
+   ```
+6. Acceder a la aplicación en el navegador: [http://localhost:4321](http://localhost:4321)
+
+---
 
