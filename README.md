@@ -1,11 +1,5 @@
-# **APLICACIÓN DUMMY - PAGINA PRINCIPAL (Astro)**
-
-# Descripción del proyecto
-
-Página principal del proyecto dummy que consiste en una aplicación FrontEnd contenerizada desarrollada en React usando la herramienta Astro.
-
-# **DEVOPS DUMMY - HOLAVITE**
-# **REACT-VITE**
+# **DEVOPS DUMMY - PRINCIPAL**
+# **ASTRO**
 
 ## Descripción del proyecto
 Este proyecto dummy consiste en el FrontEnd principal del proyecto contenerizado desarrollado en `Astro`, sus pruebas unitarias están siendo desarrolladas utilizando `Vittest`.
