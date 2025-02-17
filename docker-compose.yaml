@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+
+  frontend-astro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8007:8007"
+    environment:
+      - NODE_ENV=production
+
+  backend-laravel:
+    build:
+      context: ../devopsdummy-laravel-subpage-ms-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8008:8008"
+    volumes:
+      - ../devopsdummy-laravel-subpage-ms-backend:/app/backend-laravel
+    networks:
+      - laravel-network
+
+  frontend-laravel:
+    build:
+      context: ../devopsdummy-laravel-subpage-mfe-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8009:8009"
+    volumes:
+      - ../devopsdummy-laravel-subpage-mfe-frontend:/app/frontend-laravel
+    environment:
+      - BACKEND_URL=http://backend-laravel:8008 # Referencia al backend por el nombre del servicio
+    networks:
+      - laravel-network
+
+  backend-node:
+    build:
+      context: ../devopsdummy-node-subpage-ms-backend
+      dockerfile: Dockerfile
+    ports:
+      - "9001:3000"
+    environment:
+      - NODE_ENV=production
+      - DB_MONGO=mongodb://mongodb:27017/dummy
+    depends_on:
+      - mongodb
+
+  frontend-react:
+    build:
+      context: ../devopsdummy-react-subpage-mfe-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:3000"
+    environment:
+      - NODE_ENV=production
+
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+networks:
+  laravel-network:
+    driver: bridge
