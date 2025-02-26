@@ -2,7 +2,7 @@
 # **ASTRO**
 
 ## Descripción del proyecto
-Este proyecto dummy consiste en el FrontEnd principal del proyecto contenerizado desarrollado en `Astro`, sus pruebas unitarias están siendo desarrolladas utilizando `Vittest`.
+Este proyecto es el FrontEnd principal de la aplicación dummy contenerizada, desarrollada con `Astro`. Las pruebas unitarias se están implementando utilizando `Vitest`.
 
 ## Funcionamiento
 Este proyecto funciona disponiendo botones que consultan las URL de los proyectos de React, Laravel y Springboot. (FALTAN ANGULAR Y NEXT)
