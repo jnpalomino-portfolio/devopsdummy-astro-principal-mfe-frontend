@@ -5,7 +5,7 @@
 Este proyecto es el FrontEnd principal de la aplicación dummy contenerizada, desarrollada con `Astro`. Las pruebas unitarias se están implementando utilizando `Vitest`.
 
 ## Funcionamiento
-Este proyecto funciona disponiendo botones que consultan las URL de los proyectos de React, Laravel y Springboot. (FALTAN ANGULAR Y NEXT)
+Este proyecto funciona disponiendo botones que consultan las URL de los proyectos Dummy de React, Laravel y Springboot. (FALTA IMPLEMENTAR/DESARROLLAR LOS MICROFRONTENDS DE ANGULAR Y NEXTJS)
 
 ![Imagen del proyecto](image.png)
 
