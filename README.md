@@ -10,7 +10,7 @@ Este proyecto funciona disponiendo botones que consultan las URL de los proyecto
 ![Imagen del proyecto](image.png)
 
 ## Objetivo
-El objetivo principal de este proyecto es proporcionar un proyecto de prueba para el equipo DevOps. Se utiliza para realizar pruebas de los pipelines de CI/CD desarrollados en el repositorio `devops-pipeline-cicd`. 
+El objetivo principal de este proyecto es proporcionar una aplicación de prueba para el equipo DevOps. Esta aplicación se despliega en los clusters de OpenShift mediante los pipelines de CI/CD desarrollados en el repositorio `devops-pipeline-cicd`.
 
 Los pasos del pipeline incluyen:
 
